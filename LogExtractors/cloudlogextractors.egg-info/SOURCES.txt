@@ -1,0 +1,9 @@
+setup.py
+AzureExtractors/AppInsightsReader.py
+AzureExtractors/AzureLogClient.py
+AzureExtractors/AzureMetricsReader.py
+AzureExtractors/__init__.py
+cloudlogextractors.egg-info/PKG-INFO
+cloudlogextractors.egg-info/SOURCES.txt
+cloudlogextractors.egg-info/dependency_links.txt
+cloudlogextractors.egg-info/top_level.txt
