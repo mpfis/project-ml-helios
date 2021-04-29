@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: cloudlogextractors
+Version: 0.0.26
+Summary: Package contains wrapper methods around various APIs to extract log data from popular cloud log collection services like Azure Application Insights and AWS CloudWatch
+Home-page: UNKNOWN
+Author: Max Fisher
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
