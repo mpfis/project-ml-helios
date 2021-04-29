@@ -44,7 +44,7 @@ import requests
 import json
 
 # Function for calling the API
-def service_query(input_data, uri, deployment_type):
+def service_query(input_data, uri):
   response = requests.post(
               url=uri, data=json.dumps(input_data),
               headers={"Content-type": "application/json"})
@@ -58,7 +58,11 @@ def service_query(input_data, uri, deployment_type):
 for sample_json in sample_jsons:
   send_anomaly = True if random.randint(1, 100) > 98 else False
   if send_anomaly:
-    service_query(anomalous_jsons[random.randint(0,99)], scoring_uri, deployment_type)
+    service_query(anomalous_jsons[random.randint(0,99)], scoring_uri)
     print("anomaly sent")
-  service_query(sample_json, scoring_uri, deployment_type)
+  service_query(sample_json, scoring_uri)
   time.sleep(random.randint(3,10))
+
+# COMMAND ----------
+
+
