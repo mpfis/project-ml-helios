@@ -43,7 +43,7 @@ MODEL_PROJECT_NAME = dbutils.widgets.get("model_project_name")
 spark.sql(f"CREATE DATABASE IF NOT EXISTS {MODEL_PROJECT_NAME}")
 username = spark.sql("SELECT current_user()").collect()[0][0]
 sensorData = spark.read.csv(f"dbfs:/FileStore/shared_uploads/{username}/sensordata.csv", header=True, inferSchema=True)
-sensorData.write.saveAsTable(f"{MODEL_PROJECT_NAME}.sensor", format="delta", mode="overwrite")
+sensorData.write.saveAsTable(f"{DB_NAME}.sensor", format="delta", mode="overwrite")
 dataDf = spark.table("sensor").where(col('Device') == 'Device001')
 
 # COMMAND ----------
